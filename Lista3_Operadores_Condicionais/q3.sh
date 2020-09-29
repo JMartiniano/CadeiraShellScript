@@ -6,9 +6,6 @@ ta=$(cat ${a} | wc -l )
 tb=$(cat ${b} | wc -l )
 tc=$(cat ${c} | wc -l )
 
-echo "${ta} ${tb} ${tc}"
-
-
 if [ ${ta} > ${tb} > ${tc} ];then
 	echo "${a}, ${b}, ${c}"
 elif [ ${ta} > ${tc} > ${tb} ];then

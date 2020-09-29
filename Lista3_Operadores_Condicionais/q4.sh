@@ -6,8 +6,6 @@ ta=$(ls ${a} | wc -l)
 tb=$(ls ${b} | wc -l)
 tc=$(ls ${c} | wc -l)
 
-echo "${ta} ${tb} ${tc}"
-
 if [ ${ta} > ${tb} > ${tc} ];then
 	echo "${a}, ${b}, ${c}"
 
