@@ -8,13 +8,17 @@ tc=$(cat ${c} | wc -l )
 
 echo "${ta} ${tb} ${tc}"
 
-if [ ${ta} > ${tb} ];then
-	if [ ${tb} > ${tc} ];then
-		echo "${a} ${b} ${c}"
-	elif [ ${tc} > ${tb} ];then 
-		echo "${a} ${c} ${b}"
-elif [ ${tb} > ${ta} ];then
-	if [ ${ta} > ${tc} ];then
-		echo "${b} ${a} ${c}"
-	elif [ ${tc} > ${tb} ];then
-		echo "${b} ${c} ${a}"
+
+if [ ${ta} > ${tb} > ${tc} ];then
+	echo "${a}, ${b}, ${c}"
+elif [ ${ta} > ${tc} > ${tb} ];then
+	echo "${a}, ${c}, ${b}"
+elif [ ${tb} > ${ta} > ${tc} ];then
+	echo "${b}, ${a}, ${c}"
+elif [ ${tb} > ${tc} > ${ta} ];then
+	echo "${b}, ${c}, ${a}"
+elif [ ${tc} > ${ta} > ${tb} ];then
+	echo "${c}, ${a}, ${b}"
+elif [ ${tc} > ${tb} > ${ta} ];then
+	echo "${c}, ${b}, ${a}"
+fi
