@@ -1,0 +1,44 @@
+function dir () {
+  for i in $(ls); do
+    if [ -d ${i} ]; then
+      echo " <> ${i} <> "
+    fi
+}
+
+function arq () {
+  for i in $(ls); do 
+    if [ -f ${i} ]; then
+      echo " <> ${i} <> "
+    fi
+}
+
+function showArq () {
+  if [ -f ${arq} ]; then
+    cat ${arq}
+  fi
+}
+
+
+# Botar uma opção DADOS DO ARQUIVO para mostrar dados sobre o arquivo como permissões, hora e data, tamanho e caminho do arquivo e número de linhas caso seja um txt
+# As funções abaixo são para a opçõa DADOS DO ARQUIVO
+
+function linhas () {
+  if [ -f ${arq} ]; then
+    cat ${arq} | wc l
+  fi
+}
+
+function tamanho () {
+}
+
+function permissoes () {
+  if [ -f ${arq} ];then
+    ls -l ${arq}
+  fi
+}
+
+function path () {
+  if [ -f ${arq} ];then
+    pwd
+}
+
