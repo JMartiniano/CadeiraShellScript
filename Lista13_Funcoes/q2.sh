@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$( cat "$1" | tr ' ' '\n' > aa )
+$( cat "$1" | tr ' ' '\n' > aa ) #VAI RECEBER O ARQUIVO COM OS NÚMEROS E TRANSFORMAR EM UMA LISTA.
 
 source q1.sh
 
